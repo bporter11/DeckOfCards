@@ -30,18 +30,16 @@ public:
 	{
 		int totalWeight = 0;
 		for (auto& c : dealerHand.getHand())
-		{
 			totalWeight += c.getWeight();
-		}
+		
 		return totalWeight;
 	}
 	int getPlayerWeight()
 	{
 		int totalWeight = 0;
 		for (auto& c : playerHand.getHand())
-		{
 			totalWeight += c.getWeight();
-		}
+		
 		return totalWeight;
 	}
 	void checkSpecialMoves()
@@ -60,9 +58,11 @@ public:
 	{
 		//implement dealer rules
 	}
-	void handleAces()
+
+	//determines if an ace should be 11 or 1
+	void handlePlayerAces()
 	{
-		//determines if an ace should be 11 or 1
+
 	}
 
 	//self explanatory
