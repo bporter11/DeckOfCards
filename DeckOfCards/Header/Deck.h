@@ -106,16 +106,13 @@ public:
 	}
 
 
-	//shuffles the deck
+	//shuffles the deck using system time to randomize the shuffle
 	void shuffleDeck()
 	{
 		Card cardOne = Card();
 		Card cardTwo = Card();
 		time_t rawtime;
 		time(&rawtime);
-
-
-
 
 		int vIndex = 0;
 		for (int i = 0; i < rawtime % 10000; i++)

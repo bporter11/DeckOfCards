@@ -3,6 +3,8 @@
 #include "Deck.h"
 #include <vector>
 
+//hand class, a vector of cards seperate from the deck vector of cards,
+
 class Hand : public Card
 {
 private:
@@ -15,14 +17,23 @@ public:
 	}
 	void printHand()
 	{
-		for (int i = 0; i < hand.size(); i++)
-		{
-			hand[i].printCard();
-		}
+		for (auto& c : hand)
+			c.printCard();
 	}
+
+	//passes the hand vector by reference to directly access it outside the class
 	std::vector<Card>& getHand()
 	{
 		return hand;
+	}
+
+	int getHandWeight()
+	{
+		int totalWeight = 0;
+		for (auto& c : hand)
+			totalWeight += c.getWeight();
+
+		return totalWeight;
 	}
 
 	//checks to see wether the hand has an ace/aces
