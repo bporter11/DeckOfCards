@@ -11,18 +11,18 @@ public:
 	Card() {}
 
 	//overloaded constructor, creates a new card object
-	Card(std::string newRank, std::string newSuit)
+	Card(std::string& newRank, std::string& newSuit)
 	{
 		rank = newRank;
 		suit = newSuit;
 	}
 
 	//setters
-	void setRank(std::string newRank)
+	void setRank(const std::string& newRank)
 	{
 		rank = newRank;
 	}
-	void setSuit(std::string newSuit)
+	void setSuit(const std::string& newSuit)
 	{
 		suit = newSuit;
 	}
